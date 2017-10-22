@@ -119,6 +119,7 @@ app.get("/message", messageController.findAllMessages);
 app.get("/message/:messageId", messageController.findMessage);
 app.post("/message/sendmessage", messageController.sendFbMessage);
 app.put("/message/:messageId", messageController.updateMessage);
+app.post("/message/updatethread/:threadId", messageController.updateThread);
 app.get("/", homeController.index);
 app.get("/login", userController.getLogin);
 app.post("/login", userController.postLogin);

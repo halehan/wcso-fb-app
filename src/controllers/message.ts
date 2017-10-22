@@ -11,6 +11,15 @@ import * as moment from "moment";
 const request = require("express-validator");
 const login = require("facebook-chat-api");
 
+export let updateThread = (req: Request, res: Response, next: NextFunction) => {
+  Message.update({threadId:  req.params.threadId}, {threadStatus: "closed"}, {multi: true},
+  function(err, num) {
+      console.log("updated ");
+  }
+  );
+};
+
+
 export let listenBot = (fbEmail: String, fbPassword: String) => {
 
 const messageTxt = "We have recived your message and have added the request to our queue.  Please standby for a law enforcement representative to respone.  If this is an emergency situation please call 911.";
