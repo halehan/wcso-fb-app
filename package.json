@@ -4,12 +4,12 @@
   "description": "A starting point for Node.js express apps with TypeScript",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sahat/hackathon-starter.git"
+    "url": "https://github.com/halehan/wcso-fb-app.git"
   },
-  "author": "Bowden Kelly",
-  "license": "MIT",
+  "author": "Thomas D. Williams",
+  "license": "ISC",
   "scripts": {
-    "start": "npm run build && npm run watch",
+    "start": "npm run build && npm run",
     "build": "npm run build-sass && npm run build-ts && npm run tslint && npm run copy-static-assets",
     "serve": "node dist/server.js",
     "watch": "concurrently -k -p \"[{name}]\" -n \"Sass,TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-sass\" \"npm run watch-ts\" \"npm run serve\"",
